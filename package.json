@@ -11,7 +11,7 @@
         "lodash.defaults": "^4.2.0"
     },
     "deprecated": false,
-    "description": "Promise based confirm for reactstrap",
+    "description": "Promise based confirm for reactstrap ",
     "devDependencies": {
         "@babel/cli": "^7.6.4",
         "@babel/core": "^7.6.4",
@@ -68,5 +68,5 @@
         "tdd": "jest --watch --notify ",
         "test": "jest "
     },
-    "version": "1.0.0"
+    "version": "1.1.1"
 }
