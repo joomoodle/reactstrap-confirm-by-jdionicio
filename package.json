@@ -1,0 +1,72 @@
+{
+    "author": {
+        "name": "Juan Pablo",
+        "email": "juanpa.ian.1992@gmail.com"
+    },
+    "bugs": {
+        "url": "https://github.com/joomoodle/reactstrap-confirm-by-jdionicio/issues"
+    },
+    "bundleDependencies": false,
+    "dependencies": {
+        "lodash.defaults": "^4.2.0"
+    },
+    "deprecated": false,
+    "description": "Promise based confirm for reactstrap",
+    "devDependencies": {
+        "@babel/cli": "^7.6.4",
+        "@babel/core": "^7.6.4",
+        "@babel/node": "^7.6.3",
+        "@babel/plugin-transform-async-to-generator": "^7.5.0",
+        "@babel/plugin-transform-regenerator": "^7.4.5",
+        "@babel/preset-env": "^7.6.3",
+        "@babel/preset-react": "^7.6.3",
+        "@babel/register": "^7.6.2",
+        "@babel/runtime": "^7.6.3",
+        "babel-eslint": "^10.0.3",
+        "babel-jest": "^24.9.0",
+        "babel-loader": "^8.0.6",
+        "core-js": "^3.3.2",
+        "enzyme": "^3.10.0",
+        "enzyme-adapter-react-16": "^1.15.1",
+        "enzyme-to-json": "^3.4.3",
+        "eslint": "^5.16.0",
+        "eslint-plugin-react": "^7.16.0",
+        "gh-pages": "^1.2.0",
+        "html-loader": "^0.5.5",
+        "html-webpack-plugin": "^3.2.0",
+        "jest": "^24.9.0",
+        "react": "^16.9.0",
+        "react-addons-test-utils": "^15.6.2",
+        "react-dom": "^16.9.0",
+        "reactstrap": "^8.1.1",
+        "regenerator-runtime": "^0.13.3",
+        "sinon": "^7.5.0",
+        "webpack": "^4.41.2",
+        "webpack-cli": "^3.3.9",
+        "webpack-dev-server": "^3.8.2"
+    },
+    "homepage": "https://github.com/joomoodle/reactstrap-confirm-by-jdionicio#readme",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "name": "reactstrap-confirm-by-jdionicio",
+    "peerDependencies": {
+        "react": "^16.4.1",
+        "react-dom": "^16.4.1",
+        "reactstrap": "^8.1.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/joomoodle/reactstrap-confirm-by-jdionicio.git"
+    },
+    "scripts": {
+        "build": "babel src -d dist --copy-files",
+        "buildExample": "webpack --mode production",
+        "deploy": "gh-pages -d examples/dist",
+        "prepublishOnly": "npm run build",
+        "publish-demo": "npm run buildExample && npm run deploy",
+        "start": "webpack-dev-server --open --mode development",
+        "tdd": "jest --watch --notify ",
+        "test": "jest "
+    },
+    "version": "1.2.0"
+}
