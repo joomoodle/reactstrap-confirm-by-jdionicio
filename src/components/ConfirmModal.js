@@ -48,7 +48,10 @@ var ConfirmModal = function ConfirmModal(_ref) {
     size: size,
     isOpen: true,
     toggle: function toggle() {
-      return onClose(false);
+      if(_ref.closedforContent){
+        return onClose(false);
+
+      }
     },
     className: "reactstrap-confirm ".concat(className)
   }, title && _react["default"].createElement(_reactstrap.ModalHeader, {
@@ -67,7 +70,8 @@ ConfirmModal.defaultProps = {
   cancelColor: '',
   className: '',
   buttonsComponent: null,
-  size: null
+  size: null,
+  closedforContent: true
 };
 ConfirmModal.propTypes = {
   onClose: _propTypes["default"].func.isRequired,
@@ -79,7 +83,8 @@ ConfirmModal.propTypes = {
   cancelColor: _propTypes["default"].string,
   className: _propTypes["default"].string,
   size: _propTypes["default"].string,
-  buttonsComponent: _propTypes["default"].func
+  buttonsComponent: _propTypes["default"].func,
+  closedforContent: _propTypes["default"].func
 };
 var _default = ConfirmModal;
 exports["default"] = _default;
