@@ -1,4 +1,4 @@
-# Reactstrap confirm 
+# Reactstrap confirm by jdionicio
 
 
 An easy to use promise based confirm dialog for reactstrap.
@@ -69,3 +69,4 @@ The above example will render a customized dialog.
 | size             | Sets the size property for the modal component (see reactstrap docs)                                          | _empty_       |
 | buttonsComponent | Can receive a component for rendering the buttons. The component will receive the onClose function as a prop. | _empty_       |
 | closedforContent | Avoid closing the modal when clicking on the div that contains it. | true       |
+| zIndexModal | Use to display above a modal | 999       |
