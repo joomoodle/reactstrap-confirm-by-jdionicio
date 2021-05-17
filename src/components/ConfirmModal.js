@@ -85,7 +85,7 @@ var ConfirmModal = function ConfirmModal(_ref) {
           toggle: function toggle() {
             return onClose(false);
           },
-          styles: styleHeader
+          style: styleHeader
         },
         title || null
       ),
