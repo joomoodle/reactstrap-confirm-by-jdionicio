@@ -66,7 +66,7 @@ var ConfirmModal = function ConfirmModal(_ref) {
     toggle: function toggle() {
       return onClose(false);
     },
-    styles: styleHeader
+    style: styleHeader
   }, title || null), _react["default"].createElement(_reactstrap.ModalBody, null, message), _react["default"].createElement(_reactstrap.ModalFooter, {
     style: styleFooter
   }, buttonsContent));
