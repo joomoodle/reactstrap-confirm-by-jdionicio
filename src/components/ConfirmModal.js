@@ -128,8 +128,8 @@ ConfirmModal.propTypes = {
   buttonsComponent: _propTypes["default"].func,
   closedforContent: _propTypes["default"].func,
   zIndexModal: _propTypes["default"].number,
-  styleHeader: propTypes["default"].object,
-  styleFooter: propTypes["default"].object,
+  styleHeader: _propTypes["default"].object,
+  styleFooter: _propTypes["default"].object,
 };
 var _default = ConfirmModal;
 exports["default"] = _default;

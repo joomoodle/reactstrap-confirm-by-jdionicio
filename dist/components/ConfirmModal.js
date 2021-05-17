@@ -29,7 +29,9 @@ var ConfirmModal = function ConfirmModal(_ref) {
       buttonsComponent = _ref.buttonsComponent,
       size = _ref.size,
       closedforContent = _ref.closedforContent,
-      zIndexModal = _ref.zIndexModal;
+      zIndexModal = _ref.zIndexModal,
+      styleHeader = _ref.styleHeader,
+      styleFooter = _ref.styleFooter;
 
   var buttonsContent = _react["default"].createElement(_react["default"].Fragment, null, cancelText && _react["default"].createElement(_reactstrap.Button, {
     color: cancelColor,
@@ -63,8 +65,11 @@ var ConfirmModal = function ConfirmModal(_ref) {
   }, title && _react["default"].createElement(_reactstrap.ModalHeader, {
     toggle: function toggle() {
       return onClose(false);
-    }
-  }, title || null), _react["default"].createElement(_reactstrap.ModalBody, null, message), _react["default"].createElement(_reactstrap.ModalFooter, null, buttonsContent));
+    },
+    styles: styleHeader
+  }, title || null), _react["default"].createElement(_reactstrap.ModalBody, null, message), _react["default"].createElement(_reactstrap.ModalFooter, {
+    style: styleFooter
+  }, buttonsContent));
 };
 
 ConfirmModal.defaultProps = {
@@ -78,7 +83,9 @@ ConfirmModal.defaultProps = {
   buttonsComponent: null,
   size: null,
   closedforContent: true,
-  zIndexModal: 999
+  zIndexModal: 999,
+  styleHeader: {},
+  styleFooter: {}
 };
 ConfirmModal.propTypes = {
   onClose: _propTypes["default"].func.isRequired,
@@ -92,7 +99,9 @@ ConfirmModal.propTypes = {
   size: _propTypes["default"].string,
   buttonsComponent: _propTypes["default"].func,
   closedforContent: _propTypes["default"].func,
-  zIndexModal: _propTypes["default"].number
+  zIndexModal: _propTypes["default"].number,
+  styleHeader: _propTypes["default"].object,
+  styleFooter: _propTypes["default"].object
 };
 var _default = ConfirmModal;
 exports["default"] = _default;
