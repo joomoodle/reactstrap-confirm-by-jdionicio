@@ -27,7 +27,9 @@ var ConfirmModal = function ConfirmModal(_ref) {
     buttonsComponent = _ref.buttonsComponent,
     size = _ref.size,
     closedforContent = _ref.closedforContent,
-    zIndexModal = _ref.zIndexModal;
+    zIndexModal = _ref.zIndexModal,
+    styleHeader  = _ref.styleHeader,
+    styleFooter = _ref.styleFooter;
 
   var buttonsContent = _react["default"].createElement(
     _react["default"].Fragment,
@@ -83,13 +85,16 @@ var ConfirmModal = function ConfirmModal(_ref) {
           toggle: function toggle() {
             return onClose(false);
           },
+          styles: styleHeader
         },
         title || null
       ),
     _react["default"].createElement(_reactstrap.ModalBody, null, message),
     _react["default"].createElement(
       _reactstrap.ModalFooter,
-      null,
+      {
+        style: styleFooter
+      },
       buttonsContent
     )
   );
@@ -107,6 +112,8 @@ ConfirmModal.defaultProps = {
   size: null,
   closedforContent: true,
   zIndexModal: 999,
+  styleHeader: {},
+  styleFooter:{}
 };
 ConfirmModal.propTypes = {
   onClose: _propTypes["default"].func.isRequired,
@@ -121,6 +128,8 @@ ConfirmModal.propTypes = {
   buttonsComponent: _propTypes["default"].func,
   closedforContent: _propTypes["default"].func,
   zIndexModal: _propTypes["default"].number,
+  styleHeader: propTypes["default"].object,
+  styleFooter: propTypes["default"].object,
 };
 var _default = ConfirmModal;
 exports["default"] = _default;
